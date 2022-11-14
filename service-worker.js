@@ -1,5 +1,12 @@
 const cacheName = "cacheStore-v1"
 
+self.addEventListener("fetch", e => {
+  e.respondWith(
+    fetch(e.request).catch(() => {
+      return caches.match(e.request)
+    })
+  )
+})
 
 // install event
 self.addEventListener("install", function (event) {
@@ -25,13 +32,7 @@ self.addEventListener("install", function (event) {
     )
   })
 
-  self.addEventListener("fetch", e => {
-    e.respondWith(
-      fetch(e.request).catch(() => {
-        return caches.match(e.request)
-      })
-    )
-  })
+ 
 
   const cacheStores = [
     "https://athultony97.github.io/PWA-Lab04/",
