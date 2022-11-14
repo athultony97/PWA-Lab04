@@ -36,7 +36,7 @@ self.addEventListener("install", function (event) {
   const cacheStores = [
     "https://athultony97.github.io/PWA-Lab04/",
     `https://athultony97.github.io/PWA-Lab04/index.html`,
-    `https://athultony97.github.io/PWA-Lab04/script.js`,
+    `https://athultony97.github.io/PWA-Lab04/scripts.js`,
     `https://athultony97.github.io/PWA-Lab04/manifest.json`,
     `https://athultony97.github.io/PWA-Lab04/service-worker.js`,
     `https://athultony97.github.io/PWA-Lab04/main.css`
