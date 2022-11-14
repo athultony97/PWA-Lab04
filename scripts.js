@@ -37,7 +37,7 @@ if ("Notification" in window && "serviceWorker" in navigator) {
     // when show button clicked: new notification is created
     document.getElementById("show-button").addEventListener("click", function () {
         if (document.getElementById("title").value === "") {
-            document.getElementById("error").innerHTML = "Please enter necessary content";
+            document.getElementById("error").innerHTML = "Please add content in Title";
         } else {
             console.log("Else section")
             var options = {
@@ -52,9 +52,11 @@ if ("Notification" in window && "serviceWorker" in navigator) {
                     },
                 ],
             };
-            navigator.serviceWorker.ready.then((register) => {
-                register.showNotification(title.value, options);
-            });
+            new Notification(document.getElementById("title").value)
+            //new Notification(document.getElementById("body").value)
+             //navigator.serviceWorker.ready.then((register) => {
+               //  register.showNotification(title.value, options);
+             //});
         }
     });
 
