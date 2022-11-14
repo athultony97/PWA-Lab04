@@ -2,7 +2,7 @@
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
         navigator.serviceWorker
-            .register("./js/service-worker.js", {
+            .register("/service-worker.js", {
                 scope: "/PWA-Lab04/"
             })
             .then(registration => {
