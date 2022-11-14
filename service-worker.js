@@ -1,4 +1,4 @@
-const cacheName = "cacheStore-v1"
+const cacheName = "cacheStore-v2"
 
 self.addEventListener("fetch", e => {
   e.respondWith(
@@ -7,6 +7,15 @@ self.addEventListener("fetch", e => {
     })
   )
 })
+
+const cacheStores = [
+  "https://athultony97.github.io/PWA-Lab04/",
+  "https://athultony97.github.io/PWA-Lab04/index.html",
+  "https://athultony97.github.io/PWA-Lab04/scripts.js",
+  "https://athultony97.github.io/PWA-Lab04/manifest.json",
+  "https://athultony97.github.io/PWA-Lab04/service-worker.js",
+  "https://athultony97.github.io/PWA-Lab04/main.css"
+]
 
 // install event
 self.addEventListener("install", function (event) {
@@ -31,17 +40,6 @@ self.addEventListener("install", function (event) {
       })
     )
   })
-
- 
-
-  const cacheStores = [
-    "https://athultony97.github.io/PWA-Lab04/",
-    `https://athultony97.github.io/PWA-Lab04/index.html`,
-    `https://athultony97.github.io/PWA-Lab04/scripts.js`,
-    `https://athultony97.github.io/PWA-Lab04/manifest.json`,
-    `https://athultony97.github.io/PWA-Lab04/service-worker.js`,
-    `https://athultony97.github.io/PWA-Lab04/main.css`
-  ]
 
 
 self.addEventListener("notificationclick", (event) => {
