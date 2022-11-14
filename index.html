@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Header -->
+
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="An application for demo notification" />
-  <meta name="keywords" content="notification, alert, agree" />
-  <meta name="author" content="Athul tony" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  <meta name="apple-mobile-web-app-title" content="Notification App" />
-  <meta name="theme-color" content="rgb(40, 109, 221)" />
-  <link rel="manifest" href="./manifest.json" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An application for demo notification" />
+    <meta name="keywords" content="notification, alert, agree" />
+    <meta name="author" content="Athul tony" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Notification App" />
+    <meta name="theme-color" content="rgb(40, 109, 221)" />
+    <link rel="manifest" href="./manifest.json" />
 
-  <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./main.css" />
 
-  <title>Lab 04</title>
+    <title>Lab 04</title>
 </head>
+
+<!-- Body started-->
+
+<body>
+    <h1>Notification</h1>
+    <button id="send-notification-button" class="send-btn">Send Notification</button>
+    <div class="form-section" id="form-section">
+        <!-- Form starting-->
+        <form action="">
+            <div class="title-field">
+                <label>Title</label>
+                <input type="text" name="title" id="title" />
+            </div>
+            <div class="body-field">
+                <label>Body</label>
+                <input type="text" name="body" id="body"/>
+            </div>
+  
+        </form>
+        <div class="showBtn-field">
+            <button id="show-button">Show</button>
+        </div>
+
+        <p id="error"></p>
+
+    </div>
+
+    <!-- script -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
