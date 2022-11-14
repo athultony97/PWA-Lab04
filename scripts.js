@@ -2,7 +2,7 @@
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
         navigator.serviceWorker
-            .register("/service-worker.js", {
+            .register("service-worker.js", {
                 scope: "/PWA-Lab04/"
             })
             .then(registration => {
@@ -39,6 +39,7 @@ if ("Notification" in window && "serviceWorker" in navigator) {
         if (document.getElementById("title").value === "") {
             document.getElementById("error").innerHTML = "Please enter necessary content";
         } else {
+            console.log("Else section")
             var options = {
                 body: document.getElementById('body').value,
                 actions: [{
@@ -51,7 +52,6 @@ if ("Notification" in window && "serviceWorker" in navigator) {
                     },
                 ],
             };
-            // new Notification(title.value, options);
             navigator.serviceWorker.ready.then((register) => {
                 register.showNotification(title.value, options);
             });
