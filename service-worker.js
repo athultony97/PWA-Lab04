@@ -1,3 +1,6 @@
+const cacheName = "cacheStore-v1"
+
+
 // install event
 self.addEventListener("install", function (event) {
     self.skipWaiting()
